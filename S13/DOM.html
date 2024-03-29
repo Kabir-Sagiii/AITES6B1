@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM</title>
+    <script>
+      function documentPRoperties() {
+        var h2DomNode = document.getElementById("title");
+        for (let key in h2DomNode) {
+          document.write(key);
+          document.write("<br>");
+        }
+      }
+      function changeContent() {
+        var h3DomNode = document.createElement("h3");
+        h3DomNode.innerText = "I am H3 Tag";
+
+        var divRef = document.getElementById("firstDiv");
+        divRef.appendChild(h3DomNode);
+
+        var h2DomNode = document.getElementById("title");
+        var pDomNode = document.getElementById("p1");
+
+        h2DomNode.innerText = "DOM Manipulation using Javascript";
+        h2DomNode.style.color = "red";
+        pDomNode.remove();
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <div id="firstDiv">
+        <h2 id="title">Document Object Model</h2>
+      </div>
+      <div id="secondDiv">
+        <p id="p1">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis,
+          praesentium. Praesentium recusandae error non aliquid molestiae rerum
+          in odit laborum. Ipsum nobis eaque sapiente quas nisi nihil similique
+          repudiandae corrupti.
+        </p>
+        <button onclick="changeContent()">Change DOM</button>
+      </div>
+    </div>
+  </body>
+</html>

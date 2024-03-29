@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+}
+.navSection {
+  background-color: black;
+  color: white;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainSection {
+  padding: 50px;
+}
+.mainSection h2,
+p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
